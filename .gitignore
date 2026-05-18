@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# Virtual environments
+venv/
+env/
+.env
+.venv
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Project output (keep folder, ignore contents)
+output/*.png
+output/*.jpg
+output/*.jpeg
+output/*.webp
+
+# History (keep folder, ignore log)
+history/history.json
+
+# Presets (keep folder, user may want to track their own)
+# presets/*.json  ← commented out so user presets are tracked
+
+# Assets - keep folder structure, ignore large files
+assets/backgrounds/*.png
+assets/backgrounds/*.jpg
+assets/fonts/*.ttf
+assets/fonts/*.otf
+assets/icons/*.png
+
+# Byte-compiled / optimized
+*.pyc
+*.pyo
+
+# Distribution
+*.tar.gz
+*.zip
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak

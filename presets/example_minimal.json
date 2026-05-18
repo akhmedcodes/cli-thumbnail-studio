@@ -1,0 +1,41 @@
+{
+  "title": "Productivity 101",
+  "subtitle": "Work Smarter Not Harder",
+  "labels": [
+    "GUIDE"
+  ],
+  "filename": "final_minimal",
+  "ratio": "16:9",
+  "width": 1920,
+  "height": 1080,
+  "bg_type": "solid",
+  "bg_colors": [
+    "#f8f9fa"
+  ],
+  "bg_image_path": "",
+  "gradient_direction": "horizontal",
+  "text_color": "#212529",
+  "subtitle_color": "#6c757d",
+  "accent_color": "#0d6efd",
+  "label_bg_color": "#0d6efd",
+  "label_text_color": "#ffffff",
+  "font_style": "bold",
+  "shadow": false,
+  "shadow_color": "#00000033",
+  "shadow_offset_x": 3,
+  "shadow_offset_y": 3,
+  "shadow_blur": 8,
+  "stroke": false,
+  "stroke_color": "#212529",
+  "stroke_width": 2,
+  "overlay": false,
+  "overlay_opacity": 0,
+  "glow": false,
+  "glow_color": "#0d6efd",
+  "glow_radius": 10,
+  "blur_bg": false,
+  "blur_radius": 6,
+  "positioning": "left_aligned",
+  "cinematic_bars": false,
+  "theme": "minimal"
+}

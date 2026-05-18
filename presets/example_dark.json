@@ -1,0 +1,43 @@
+{
+  "title": "The Dark Side",
+  "subtitle": "Nobody Talks About This",
+  "labels": [
+    "TRENDING"
+  ],
+  "filename": "final_dark",
+  "ratio": "16:9",
+  "width": 1920,
+  "height": 1080,
+  "bg_type": "gradient",
+  "bg_colors": [
+    "#111111",
+    "#1c1c1c",
+    "#252525"
+  ],
+  "bg_image_path": "",
+  "gradient_direction": "radial",
+  "text_color": "#ffffff",
+  "subtitle_color": "#aaaaaa",
+  "accent_color": "#e63946",
+  "label_bg_color": "#e63946",
+  "label_text_color": "#ffffff",
+  "font_style": "bold",
+  "shadow": true,
+  "shadow_color": "#00000099",
+  "shadow_offset_x": 4,
+  "shadow_offset_y": 4,
+  "shadow_blur": 12,
+  "stroke": false,
+  "stroke_color": "#e63946",
+  "stroke_width": 3,
+  "overlay": false,
+  "overlay_opacity": 0,
+  "glow": false,
+  "glow_color": "#e63946",
+  "glow_radius": 16,
+  "blur_bg": false,
+  "blur_radius": 6,
+  "positioning": "centered",
+  "cinematic_bars": false,
+  "theme": "dark"
+}

@@ -1,0 +1,8 @@
+# Required
+Pillow>=10.0.0
+rich>=13.7.0
+colorama>=0.4.6
+
+# Optional — makes gradient rendering significantly faster
+# Install with:  pip install numpy
+numpy>=1.24.0

@@ -1,0 +1,43 @@
+{
+  "title": "Learn Python FREE",
+  "subtitle": "From Beginner to Pro",
+  "labels": [
+    "UPDATED"
+  ],
+  "filename": "final_educational",
+  "ratio": "16:9",
+  "width": 1920,
+  "height": 1080,
+  "bg_type": "gradient",
+  "bg_colors": [
+    "#2193b0",
+    "#6dd5ed",
+    "#1a6985"
+  ],
+  "bg_image_path": "",
+  "gradient_direction": "diagonal",
+  "text_color": "#ffffff",
+  "subtitle_color": "#fff9c4",
+  "accent_color": "#ff9800",
+  "label_bg_color": "#ff9800",
+  "label_text_color": "#ffffff",
+  "font_style": "bold",
+  "shadow": true,
+  "shadow_color": "#00000055",
+  "shadow_offset_x": 4,
+  "shadow_offset_y": 4,
+  "shadow_blur": 10,
+  "stroke": false,
+  "stroke_color": "#ffffff",
+  "stroke_width": 2,
+  "overlay": false,
+  "overlay_opacity": 0,
+  "glow": false,
+  "glow_color": "#ff9800",
+  "glow_radius": 14,
+  "blur_bg": false,
+  "blur_radius": 6,
+  "positioning": "modern_youtube",
+  "cinematic_bars": false,
+  "theme": "educational"
+}
