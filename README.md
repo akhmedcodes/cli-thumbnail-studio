@@ -1,150 +1,73 @@
+<div align="center">
+
 # 🎨 CLI Thumbnail Studio
 
-A professional, terminal-based image creation tool with **two powerful generators**:
+**Professional image generator that runs entirely in the terminal.**
+Create YouTube thumbnails and educational slides — no GUI, no browser, pure Python CLI.
 
-1. **YouTube Thumbnail Generator** — MrBeast-style, gaming, tech, AI, cyberpunk and more
-2. **Educational Slide Generator** — Code slides, tutorial steps, timelines, quote cards, comparisons
+[![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![Pillow](https://img.shields.io/badge/Pillow-10%2B-ED8B00?style=flat-square)](https://pillow.readthedocs.io)
+[![Rich](https://img.shields.io/badge/Rich-13%2B-A020F0?style=flat-square)](https://rich.readthedocs.io)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/Docs-GitHub%20Pages-0969DA?style=flat-square&logo=github)](https://akhmedcodes.github.io/cli-thumbnail-studio/)
 
-All inside the terminal. No web browser. No GUI. Pure CLI.
+```bash
+pip install Pillow rich colorama
+python3 run.py
+```
+
+[📖 Full Documentation](https://akhmedcodes.github.io/cli-thumbnail-studio/) · [⭐ Star on GitHub](https://github.com/akhmedcodes/cli-thumbnail-studio)
+
+</div>
+
+---
+
+## ✨ What it generates
+
+| Tool | Output |
+|------|--------|
+| **Thumbnail Generator** | YouTube-ready PNGs — gaming, tech, AI, cyberpunk, minimal, finance styles |
+| **Slide Generator** | Code slides, tutorial steps, timelines, comparison cards, quote screens |
+| **Batch Renderer** | All 11 themes or 13 layouts in parallel — one command |
 
 ---
 
 ## 🚀 Quick Start
 
 ```bash
-# Install dependencies
-pip install Pillow rich colorama
+# Clone
+git clone https://github.com/akhmedcodes/cli-thumbnail-studio.git
+cd cli-thumbnail-studio
 
-# Optional — speeds up gradient rendering significantly
+# Install
+pip install Pillow rich colorama
+# Optional — makes gradients 10× faster
 pip install numpy
 
-# Run the app
+# Run
 python3 run.py
 ```
 
----
-
-## 📁 Project Structure
-
-```
-cli-thumbnail-studio/
-├── run.py                    # Entry point — tool selection menu
-├── requirements.txt
-├── core/
-│   ├── cli.py               # Thumbnail CLI (rich-based)
-│   ├── renderer.py          # Thumbnail rendering pipeline
-│   ├── themes.py            # 8 thumbnail themes
-│   ├── config.py            # ThumbnailConfig dataclass
-│   ├── gradient.py          # Gradient engine (NumPy + PIL fallback)
-│   ├── effects.py           # Visual effects (vignette, glow, scanlines…)
-│   ├── text_engine.py       # Text rendering with shadow/glow/stroke
-│   ├── font_manager.py      # Font discovery & fallback system
-│   ├── slide_cli.py         # Slide generator CLI
-│   ├── slide_renderer.py    # Slide rendering pipeline
-│   ├── slide_config.py      # SlideConfig dataclass
-│   ├── slide_themes.py      # 11 slide themes
-│   ├── components.py        # 19 visual components
-│   ├── layouts.py           # 13 layout templates
-│   ├── utils.py             # Shared drawing utilities
-│   ├── preset_manager.py    # JSON preset save/load
-│   └── history_manager.py   # Render history tracking
-├── assets/
-│   ├── fonts/               # Drop custom .ttf fonts here
-│   ├── icons/
-│   └── backgrounds/
-├── presets/                 # Saved JSON configurations
-├── history/                 # Render history log
-└── output/                  # Generated PNG images
+**CLI shortcuts:**
+```bash
+python3 run.py --tool 1          # Thumbnail generator (no menu)
+python3 run.py --tool 2          # Slide generator (no menu)
+python3 run.py --demo            # Generate 10-slide demo gallery
+python3 run.py --batch-themes    # Render all 11 themes in parallel
+python3 run.py --history         # Browse render history
+python3 run.py --preview         # Live browser preview at localhost:7771
+python3 run.py --help            # Full help
 ```
 
 ---
 
 ## 🎨 Tool 1 — YouTube Thumbnail Generator
 
-### 8 Built-in Themes
+8 built-in themes, 4 layout styles, 720p → 4K, auto font-scaling, shadows, glows, gradients.
 
-| Theme | Style |
-|-------|-------|
-| `gaming` | Deep purple gradient · orange neon · MrBeast energy |
-| `tech` | Near-black · cyan glow · developer aesthetic |
-| `dark` | Charcoal · red accent · cinematic drama |
-| `minimal` | White background · Apple-clean |
-| `cyberpunk` | Black · magenta/cyan neon · sci-fi |
-| `educational` | Ocean blue gradient · warm and friendly |
-| `finance` | Dark navy · gold accents · professional |
-| `ai_futuristic` | Deep space · violet glow · AI/ML content |
+**Themes:** `gaming` · `tech` · `dark` · `minimal` · `cyberpunk` · `educational` · `finance` · `ai_futuristic`
 
-### Features
-- 4 positioning styles: **centered**, **left-aligned**, **modern YouTube**, **cinematic**
-- 4 resolutions: 720p → 4K, supports 16:9 and 9:16
-- Auto font-scaling and word-wrap
-- Drop shadow, text glow, stroke/outline
-- Gradient (horizontal, vertical, diagonal, radial)
-- Custom image backgrounds with smart crop
-- Badge/label pills
-- Preset save & load system
-- Auto-timestamped PNG export
-
----
-
-## 📊 Tool 2 — Educational Slide Generator
-
-### 13 Layout Templates
-
-| Layout | Best for |
-|--------|----------|
-| `standard` | General purpose — title + body + bullets + code |
-| `code_focus` | Code snippet dominates the slide |
-| `two_column` | Text left · code/steps right |
-| `numbered_steps` | Step-by-step tutorial |
-| `quote` | Centered large quote card |
-| `checklist` | ✓/○ items with progress bar |
-| `comparison` | Side-by-side comparison |
-| `statistic` | Big number / key metric |
-| `terminal` | Shell commands front and center |
-| `tip_card` | Info / warning / success / error card |
-| `top_n` | Ranked numbered list |
-| `centered` | Intro / outro screens |
-| `timeline` | Vertical event timeline |
-
-### 11 Visual Themes
-
-| Theme | Style |
-|-------|-------|
-| `dark_modern` | GitHub/VS Code dark — developer default |
-| `glassmorphism` | Frosted glass cards on purple gradient |
-| `cyberpunk` | Magenta & cyan neon on black |
-| `educational` | Ocean teal — friendly & approachable |
-| `minimal` | Apple gray — clean and distraction-free |
-| `futuristic_ai` | Deep space purple — AI/ML content |
-| `gaming` | Orange neon on deep purple |
-| `apple_style` | White keynote-style — dramatic typography |
-| `netflix_doc` | Black + Netflix red — cinematic |
-| `coding_tutorial` | Catppuccin Mocha — developer favourite |
-| `finance` | Dark navy + gold — premium business |
-
-### Components Available
-
-**Text:** TitleBlock, SubtitleBlock, BodyText  
-**Lists:** BulletList, NumberedList, ChecklistBlock, TimelineBlock  
-**Media:** CodeBlock (syntax highlighted), TerminalBlock (macOS/Linux style)  
-**Cards:** InfoCard (info/warning/success/error/tip), ComparisonBlock  
-**Data:** StatCard (big numbers), ProgressRow (labelled bars)  
-**UI:** TagsRow, DividerLine, FooterBlock, WatermarkBlock, StepProgressBar
-
-### Syntax Highlighting Support
-- Python
-- JavaScript / TypeScript
-- Bash / Shell
-- HTML / CSS
-- Generic (no highlighting)
-
----
-
-## 💡 Usage Examples
-
-### Quick render (programmatic)
-
+**Programmatic usage:**
 ```python
 from core.config import ThumbnailConfig
 from core.themes import get_theme
@@ -155,12 +78,41 @@ cfg = ThumbnailConfig.from_dict({
     **get_theme("gaming"),
     "title": "INSANE CHALLENGE",
     "subtitle": "100 Players Survive",
-    "labels": ["EPIC", "WATCH NOW"],
+    "labels": ["EPIC", "NEW"],
     "width": 1920, "height": 1080,
 })
 path = render_and_save(cfg)
-print(f"Saved: {path}")
 ```
+
+---
+
+## 📊 Tool 2 — Educational Slide Generator
+
+### 13 Layout Templates
+
+| Layout | Use case |
+|--------|----------|
+| `standard` | All-purpose: title + body + bullets + code |
+| `code_focus` | Code dominates, small title above |
+| `two_column` | Text left · code/steps right |
+| `numbered_steps` | Step-by-step tutorial |
+| `quote` | Large centered quote |
+| `checklist` | ✓/○ items with progress bar |
+| `comparison` | Side-by-side VS layout |
+| `statistic` | Big number / key metric |
+| `terminal` | Shell commands window |
+| `tip_card` | Info / warning / success card |
+| `top_n` | Ranked numbered list |
+| `centered` | Intro / outro screen |
+| `timeline` | Vertical event timeline |
+
+### 11 Visual Themes
+
+`dark_modern` · `glassmorphism` · `cyberpunk` · `educational` · `minimal` · `futuristic_ai` · `gaming` · `apple_style` · `netflix_doc` · `coding_tutorial` · `finance`
+
+### Syntax-highlighted code blocks
+
+Supports Python · JavaScript/TypeScript · Bash/Shell · HTML/CSS
 
 ```python
 from core.slide_config import SlideConfig
@@ -170,19 +122,79 @@ cfg = SlideConfig(
     layout_type="code_focus",
     theme="coding_tutorial",
     title="FastAPI Route Handler",
-    subtitle="async def with type hints",
-    code_snippet="""from fastapi import FastAPI
-
-app = FastAPI()
-
-@app.get("/hello")
-async def hello():
-    return {"message": "Hello World"}""",
+    code_snippet="""@app.post("/items/")
+async def create_item(item: Item):
+    return {"item": item, "status": "created"}""",
     code_language="python",
     width=1920, height=1080,
 )
 path = render_slide_and_save(cfg)
-print(f"Saved: {path}")
+```
+
+---
+
+## ⚡ Batch Rendering
+
+```python
+from core.slide_config import SlideConfig
+from core.batch import BatchRenderer
+
+cfg = SlideConfig(title="My Slide", subtitle="All Themes", width=1920, height=1080)
+br = BatchRenderer(cfg)
+
+br.theme_sweep()    # 11 themes in parallel  → output/batch_themes/
+br.layout_sweep()   # 13 layouts in parallel → output/batch_layouts/
+br.color_sweep()    # 8 accent variations    → output/batch_colors/
+br.ratio_sweep()    # 16:9 / 9:16 / 1:1     → output/batch_ratios/
+```
+
+---
+
+## 🌐 Live Preview
+
+```bash
+python3 run.py --preview
+# Opens http://localhost:7771
+# Auto-refreshes every 2 seconds after each render
+```
+
+---
+
+## 📁 Project Structure
+
+```
+cli-thumbnail-studio/
+├── run.py                    # Entry point + 7-item main menu
+├── requirements.txt
+├── docs/                     # GitHub Pages documentation site
+│   └── index.html
+├── core/
+│   ├── cli.py               # Thumbnail CLI (rich-based interactive)
+│   ├── renderer.py          # Thumbnail rendering pipeline
+│   ├── themes.py            # 8 thumbnail themes
+│   ├── config.py            # ThumbnailConfig dataclass
+│   ├── slide_cli.py         # Slide generator CLI
+│   ├── slide_renderer.py    # Slide rendering pipeline
+│   ├── slide_config.py      # SlideConfig dataclass
+│   ├── slide_themes.py      # 11 slide themes
+│   ├── components.py        # 19 visual components
+│   ├── layouts.py           # 13 layout templates
+│   ├── gradient.py          # Gradient engine (NumPy + PIL fallback)
+│   ├── effects.py           # Vignette, glow, scanlines, particles…
+│   ├── text_engine.py       # Text rendering with shadow/glow/stroke
+│   ├── font_manager.py      # Font discovery + fallback system
+│   ├── utils.py             # Shared drawing utilities
+│   ├── batch.py             # Parallel batch renderer + history browser
+│   ├── preview.py           # Terminal preview + browser server
+│   ├── preset_manager.py    # JSON preset save/load
+│   └── history_manager.py   # Render history tracking
+├── assets/
+│   ├── fonts/               # Drop custom .ttf fonts here
+│   ├── icons/
+│   └── backgrounds/
+├── presets/                 # Saved configurations (JSON)
+├── history/                 # render history log
+└── output/                  # Generated PNG files
 ```
 
 ---
@@ -190,44 +202,45 @@ print(f"Saved: {path}")
 ## 📋 Requirements
 
 | Package | Purpose | Required |
-|---------|---------|----------|
-| `Pillow >= 10.0` | Image generation | ✅ Yes |
-| `rich >= 13.7` | Beautiful terminal UI | ✅ Yes |
-| `colorama >= 0.4` | Cross-platform colours | ✅ Yes |
-| `numpy >= 1.24` | Fast gradient rendering | ⚡ Optional |
+|---------|---------|:--------:|
+| `Pillow >= 10.0` | Image generation | ✅ |
+| `rich >= 13.7` | Terminal UI | ✅ |
+| `colorama >= 0.4` | Cross-platform colours | ✅ |
+| `numpy >= 1.24` | Fast gradients (10× speedup) | ⚡ Optional |
 
 ---
 
-## 🗂 Features Checklist
+## 🔑 Features
 
-- [x] Smart auto-layout engine
-- [x] Dynamic text resizing
-- [x] Auto word-wrap
-- [x] Overflow prevention
-- [x] Responsive aspect-ratio scaling
-- [x] Gradient rendering (4 directions + radial)
-- [x] Glassmorphism cards (real blur)
-- [x] Neon glow text
-- [x] Drop shadows
-- [x] Syntax-highlighted code blocks
-- [x] macOS-style terminal window mockup
-- [x] Rounded cards with borders
-- [x] Progress bars & step indicators
-- [x] Vignette, scanlines, particles, hex grid
-- [x] Preset save/load (JSON)
-- [x] Render history
-- [x] Auto-timestamped filenames
-- [x] KeyboardInterrupt safe everywhere
-- [x] NumPy optional — pure PIL fallback
-- [x] Font fallback engine (searches system fonts)
-- [x] Custom image backgrounds with smart crop
+- ✅ Smart auto-layout with overflow prevention
+- ✅ Dynamic font scaling and word-wrap
+- ✅ Syntax-highlighted code blocks (Python · JS · Bash · HTML)
+- ✅ macOS-style terminal window mockup
+- ✅ Real glassmorphism (blurs content behind cards)
+- ✅ Neon glow, drop shadows, stroke, vignette
+- ✅ Gradient: horizontal, vertical, diagonal, radial
+- ✅ Parallel batch rendering (4 threads)
+- ✅ Live browser preview (auto-refresh, no WebSocket dep)
+- ✅ Preset save/load (JSON)
+- ✅ Full render history
+- ✅ Auto-timestamped filenames
+- ✅ NumPy optional — pure PIL fallback always works
+- ✅ System font discovery (Linux · macOS · Windows)
+- ✅ Custom image backgrounds with smart centre-crop
+- ✅ KeyboardInterrupt safe everywhere
+- ✅ `--verbose` / `--silent` / `--help` CLI flags
 
 ---
 
 ## 📄 License
 
-MIT License — use freely for personal and commercial projects.
+MIT — free for personal and commercial use.
 
 ---
 
-Made with ❤️ using Python + Pillow + Rich
+<div align="center">
+Made with ❤️ using Python · Pillow · Rich<br>
+<a href="https://akhmedcodes.github.io/cli-thumbnail-studio/">📖 Documentation</a> ·
+<a href="https://github.com/akhmedcodes/cli-thumbnail-studio/issues">🐛 Issues</a> ·
+<a href="https://github.com/akhmedcodes/cli-thumbnail-studio/pulls">🔀 Pull Requests</a>
+</div>
